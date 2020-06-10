@@ -54,7 +54,7 @@ Evilginx runs very well on the most basic Debian 8 VPS.
 
 #### Installing from source
 
-In order to compile from source, make sure you have installed **GO** of version at least **1.10.0** (get it from [here](https://golang.org/doc/install)) and that `$GOPATH` environment variable is set up properly (def. `$HOME/go`).
+In order to compile from source, make sure you have installed **GO** of version at least **1.14.0** (get it from [here](https://golang.org/doc/install)) and that `$GOPATH` environment variable is set up properly (def. `$HOME/go`).
 
 After installation, add this to your `~/.profile`, assuming that you installed **GO** in `/usr/local/go`:
 
@@ -87,7 +87,7 @@ Instructions above can also be used to update **evilginx2** to the latest versio
 
 #### Installing with Docker
 
-You can launch **evilginx2** from within Docker. First build the container:
+You can launch **evilginx2** from within Docker. First build the image:
 ```
 docker build . -t evilginx2
 ```
@@ -166,7 +166,7 @@ phishlets enable linkedin
 Your phishing site is now live. Think of the URL, you want the victim to be redirected to on successful login and get the phishing URL like this (victim will be redirected to `https://www.google.com`):
 ```
 lures create linkedin
-lures edit redirect-url 0 https://www.google.com
+lures edit redirect_url 0 https://www.google.com
 lures get-url 0
 ```
 
